@@ -220,7 +220,7 @@ function pageBtnEvent(offsetVal) {
             const element = iframeDocument.querySelector(".post-container");
             const rect = element.getBoundingClientRect();
             const marginTop =0;// parseInt(window.getComputedStyle(element).marginTop);
-            const totalHeight = rect.height + marginTop + 5;
+            const totalHeight = rect.height + marginTop ;
 
             const multiplier = Math.floor(offsetVal / 3); //as each of my row contains fixed 3 items
             const scrolledHeight = totalHeight * multiplier * (pageNo - 1);
@@ -271,7 +271,7 @@ setTimeout(() => {
     const marginTop = 0;//parseInt(window.getComputedStyle(element).marginTop);
     const totalHeight = rect.height + marginTop;
 
-    let pageNum = Math.ceil(currentHeight / (3 * totalHeight));
+    let pageNum = (currentHeight / (3 * totalHeight))+0.5;
 
     const currPage = document.querySelector("#curr-page");
     let pageval = Math.ceil(pageNum / (offsetVal / 10));

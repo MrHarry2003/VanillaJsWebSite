@@ -20,7 +20,7 @@ setTimeout(() => {
   const container = iframeDocument.getElementById("container");
 
   display.displayPosts(container, storedPost);
-}, 1000);
+}, 1500);
 
 //ADDING SEARCH EVENT TO THE SEARCH BUTTON IN HEADER
 setTimeout(async () => {

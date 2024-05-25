@@ -46,7 +46,7 @@ setTimeout(async () => {
       pageBtnEvent(offsetVal);
     });
   });
-}, 200);
+}, 300);
 
 //ADDING THE EVENT IN WHICH IF USER HAS SEARCHED SOMETHING AND WANT TO RETURN TO THE ORIGINAL PAGE ITEM DISPLAY
 setTimeout(() => {
@@ -70,7 +70,7 @@ setTimeout(() => {
       pageBtnEvent(offsetVal);
     }
   });
-}, 200);
+}, 300);
 
 //Adding the event of ascending and descending sort of posts by their ids
 setTimeout(() => {
@@ -98,7 +98,7 @@ setTimeout(() => {
       display.displayPosts(container, postArr);
     }
   });
-}, 100);
+}, 300);
 
 //DEEPCOPY
 const deepCopy = (obj) => {
@@ -126,7 +126,7 @@ iframeDocument.addEventListener("scroll", () => {
   if (
     iframeDocument.documentElement.scrollTop +
       iframeDocument.documentElement.clientHeight >=
-      iframeDocument.documentElement.scrollHeight-10 &&
+      iframeDocument.documentElement.scrollHeight-400 &&
     searchValue === "" &&
     optionVal === "original"
   ) {
@@ -138,7 +138,7 @@ iframeDocument.addEventListener("scroll", () => {
         if (storedPost.length <= 150 && len != storedPost.length) {
           display.appendPosts(cont, storedPost, len);
         }
-      }, 500);
+      }, 800);
     }, 100);
   }
 });
@@ -153,7 +153,7 @@ setTimeout(() => {
     const panel = document.getElementById("panel");
     panel.style.display = "block";
   });
-}, 100);
+}, 300);
 
 //AS THERE ARE 150 TOTAL POSTS , ADDING AN EVENT TO THE OFFSET BUTTON THAT WILL ADJUST THE NUMBER
 //OF BUTTONS AT THE FOOTER ACCORDING TO THE OFFSET VALUE (EACH PAGE WILL CONTAIN GIVEN OFFSET VALUE NO. OF PAGES)
@@ -238,7 +238,7 @@ setTimeout(() => {
   document.querySelector(".top").addEventListener("click", () => {
     iframeDocument.documentElement.scrollTo(0, 0);
   });
-}, 200);
+}, 300);
 
 //ADDING EVENT TO PREV BUTTON ON THE PAGINATION
 setTimeout(() => {
@@ -255,7 +255,7 @@ setTimeout(() => {
     const scrolledHeight = totalHeight * multiplier;
     iframeDocument.documentElement.scrollTo(0, currentHeight - scrolledHeight);
   });
-}, 100);
+}, 300);
 
 let currBtnNo = -1;
 //Adding scroll event to show the current page on the screen!
@@ -286,7 +286,7 @@ setTimeout(() => {
       currBtnNo = pageval == 0 ? 0 : pageval - 1;
       const currBtn = allBtns[currBtnNo];
       currBtn.style.backgroundColor = "red";
-    }, 200);
+    }, 300);
   });
 
   document.querySelector("#next").addEventListener("click", () => {

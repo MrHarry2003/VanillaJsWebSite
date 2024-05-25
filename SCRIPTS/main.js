@@ -121,13 +121,16 @@ const deepCopy = (obj) => {
 //ADDING THE INFINITE SCROLL EVENT ON THE IFRAME FOR DIPSLAYING THE POSTS
 let dbTime2;
 iframeDocument.addEventListener("scroll", () => {
+  clearTimeout(dbTime2);
+  dbTime2=setTimeout(()=>{
+
   let cont = iframeDocument.getElementById("container");
   var searchInput = document.getElementById("search");
   // Get the value of the input field
   var searchValue = searchInput.value;
   let sortVal = document.querySelector("#sort");
   let optionVal = sortVal.value;
-  clearTimeout(dbTime2);
+  
   if (
     iframeDocument.documentElement.scrollTop +
       iframeDocument.documentElement.clientHeight >=
@@ -136,16 +139,19 @@ iframeDocument.addEventListener("scroll", () => {
     optionVal === "original"
   ) {
     
-    dbTime2=setTimeout(() => {
+    setTimeout(() => {
       let len = storedPost.length;
       productApi.getAllPosts(10, storedPost.length);
       setTimeout(() => {
         if (storedPost.length <= 150 && len != storedPost.length) {
           display.appendPosts(cont, storedPost, len);
         }
-      }, 800);
-    }, 100);
+      }, 300);
+    }, 10);
   }
+
+  },500)
+  
 });
 
 //Adding Fav-Panel button event (Side-panel pop-up)

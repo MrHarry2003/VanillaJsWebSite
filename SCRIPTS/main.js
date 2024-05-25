@@ -32,21 +32,24 @@ setTimeout(async () => {
     // Get the value of the input field
     var searchValue = searchInput.value;
     // Display the search value (you can replace this with your logic)
-    productApi.search(searchValue).then((data) => {
-      searchedAPost = data;
-      let iframe = document.getElementById("card-section");
-      let iframeDocument = iframe.contentDocument;
-      const container = iframeDocument.getElementById("container");
-      display.displayPosts(container, data);
-      //After searching making the sort select button to its original select value
-      const sortBtn = document.querySelector("#sort");
-      sortBtn.value = "original";
-      //Setting the buttons accordingly to the searched posts now
-      const offsetVal = document.getElementById("offset").value;
-      const btnContainer = document.querySelector("#pages");
-      display.displayPageBtn(btnContainer, offsetVal, searchedAPost.length);
-      pageBtnEvent(offsetVal);
-    });
+    if(searchValue!=""){
+      productApi.search(searchValue).then((data) => {
+        searchedAPost = data;
+        let iframe = document.getElementById("card-section");
+        let iframeDocument = iframe.contentDocument;
+        const container = iframeDocument.getElementById("container");
+        display.displayPosts(container, data);
+        //After searching making the sort select button to its original select value
+        const sortBtn = document.querySelector("#sort");
+        sortBtn.value = "original";
+        //Setting the buttons accordingly to the searched posts now
+        const offsetVal = document.getElementById("offset").value;
+        const btnContainer = document.querySelector("#pages");
+        display.displayPageBtn(btnContainer, offsetVal, searchedAPost.length);
+        pageBtnEvent(offsetVal);
+      });
+    }
+   
   });
 }, 300);
 
@@ -279,13 +282,16 @@ setTimeout(() => {
     currPage.innerHTML = pageval == 0 ? 1 : pageval;
     setTimeout(() => {
       if (currBtnNo != pageval - 1) {
-        if (currBtnNo != -1 && currBtnNo<allBtns.length) {
+        if (currBtnNo != -1 && currBtnNo<allBtns.length && pageval-1<allBtns.length) {
           allBtns[currBtnNo].style.backgroundColor = "white";
         }
       }
       currBtnNo = pageval == 0 ? 0 : pageval - 1;
-      const currBtn = allBtns[currBtnNo];
-      currBtn.style.backgroundColor = "red";
+      if(currBtnNo<allBtns.length){
+        const currBtn = allBtns[currBtnNo];
+        currBtn.style.backgroundColor = "red";
+      }
+      
     }, 300);
   });
 

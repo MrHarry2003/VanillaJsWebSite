@@ -1,0 +1,17 @@
+.footer-section {
+  display: flex;
+  justify-content: space-around;
+}
+footer{
+  background-image: url(https://img.freepik.com/free-photo/free-photo-black-grunge-abstract-background-pattern-wallpaper_1340-34125.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1712361600&semt=ais);
+  background-size: cover;
+  border: solid black;
+  padding: 10px;
+  margin: 2px;
+}
+.page-btn{
+  display: inline;
+  height: 20px;
+  width: 25px;
+}
+ 

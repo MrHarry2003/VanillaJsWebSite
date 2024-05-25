@@ -1,0 +1,60 @@
+.header-section {
+  display: flex;
+  justify-content: space-around;
+}
+header{
+  background-image: url(https://img.freepik.com/free-photo/free-photo-black-grunge-abstract-background-pattern-wallpaper_1340-34125.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1712361600&semt=ais);
+  Background-size: cover;
+  border: solid black;
+  padding: 10px;
+  margin: 2px;
+}
+#heading{
+   color: blue;
+}
+.header_item {
+  display: inline-flex;
+  position: relative;
+  justify-content: space-between;
+}
+.slide {
+    position: absolute;
+    right: 10px;
+    top: 50px; /* Adjust this value based on your header height */
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none;
+    z-index: 1000;
+ }
+ #cart-section {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+ }
+
+ #panel-content{
+    padding: 4px;
+ }
+ #closeButton {
+    display: block;
+    margin-left: auto;
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+ }
+ 
+ #cart-item-id{
+    border: solid white;
+     color: yellow;
+     display: flex;
+     background-color: black;
+     padding: 2px;
+ 
+ }

@@ -1,0 +1,42 @@
+#container {
+    display:  inline-grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .post-container {
+    /*background-color: rgba(235, 213, 213, 0.8);*/
+    background-image: url(https://i.pinimg.com/736x/5a/c1/29/5ac1296b709f4427d4c7785a322d78a2.jpg);
+    Background-size: cover;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 10px;
+    width: 80%;
+    height: 90%;
+    
+  }
+
+.post-title {
+    color: #3e3a3a;
+    margin-bottom: 5px;
+}
+
+.post-body {
+    color: #060606;
+    margin-bottom: 10px;
+    font-size: small;
+}
+
+.post-tags {
+    color: #350202;
+    font-size: 12px;
+}
+
+.addCart{
+  height: 20px;
+  width: 40px;
+  display: block;
+}

@@ -46,7 +46,7 @@ setTimeout(async () => {
       pageBtnEvent(offsetVal);
     });
   });
-}, 100);
+}, 200);
 
 //ADDING THE EVENT IN WHICH IF USER HAS SEARCHED SOMETHING AND WANT TO RETURN TO THE ORIGINAL PAGE ITEM DISPLAY
 setTimeout(() => {
@@ -70,7 +70,7 @@ setTimeout(() => {
       pageBtnEvent(offsetVal);
     }
   });
-}, 100);
+}, 200);
 
 //Adding the event of ascending and descending sort of posts by their ids
 setTimeout(() => {
@@ -98,7 +98,7 @@ setTimeout(() => {
       display.displayPosts(container, postArr);
     }
   });
-}, 50);
+}, 100);
 
 //DEEPCOPY
 const deepCopy = (obj) => {
@@ -126,7 +126,7 @@ iframeDocument.addEventListener("scroll", () => {
   if (
     iframeDocument.documentElement.scrollTop +
       iframeDocument.documentElement.clientHeight >=
-      iframeDocument.documentElement.scrollHeight-6 &&
+      iframeDocument.documentElement.scrollHeight-10 &&
     searchValue === "" &&
     optionVal === "original"
   ) {
@@ -179,7 +179,7 @@ setTimeout(() => {
       iframeDocument.documentElement.scrollTop - 1
     );
   });
-}, 100);
+}, 500);
 
 //PAGINATION
 //ADDING AUTO SCROLL EVENT TO THE PAGE BUTTONS --> THEY WILL TAKE YOU TO THE SELECTED PAGE ACCORDING TO THE OFFSET

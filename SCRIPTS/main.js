@@ -226,9 +226,9 @@ function pageBtnEvent(offsetVal) {
             const multiplier = Math.floor(offsetVal / 3); //as each of my row contains fixed 3 items
             const scrolledHeight = totalHeight * multiplier * (pageNo - 1);
             iframeDocument.documentElement.scrollTo(0, scrolledHeight);
-          }, 100);
-        }, 555);
-      }, 600);
+          }, 10);
+        },800);
+      }, 300);
     });
   }
 }

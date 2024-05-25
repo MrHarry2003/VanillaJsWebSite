@@ -146,7 +146,7 @@ iframeDocument.addEventListener("scroll", () => {
         if (storedPost.length <= 150 && len != storedPost.length) {
           display.appendPosts(cont, storedPost, len);
         }
-      }, 300);
+      }, 400);
     }, 10);
   }
 

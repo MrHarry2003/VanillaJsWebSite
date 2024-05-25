@@ -14,6 +14,7 @@ let iframeDocument = iframe.contentDocument;
 //INITIALIZING THE POSTS ON THE UI
 productApi.getAllPosts(10, 0);
 setTimeout(() => {
+  document.body.style.zoom="90%";
   //console.log(storedPost.length);
   let iframe = document.getElementById("card-section");
   let iframeDocument = iframe.contentDocument;
@@ -218,9 +219,7 @@ function pageBtnEvent(offsetVal) {
           setTimeout(() => {
             const element = iframeDocument.querySelector(".post-container");
             const rect = element.getBoundingClientRect();
-            const marginTop = parseInt(
-              window.getComputedStyle(element).marginTop
-            );
+            const marginTop =0;// parseInt(window.getComputedStyle(element).marginTop);
             const totalHeight = rect.height + marginTop + 5;
 
             const multiplier = Math.floor(offsetVal / 3); //as each of my row contains fixed 3 items
@@ -248,7 +247,7 @@ setTimeout(() => {
     const currentHeight = iframeDocument.documentElement.scrollTop;
     const element = iframeDocument.querySelector(".post-container");
     const rect = element.getBoundingClientRect();
-    const marginTop = parseInt(window.getComputedStyle(element).marginTop);
+    const marginTop = 0;//parseInt(window.getComputedStyle(element).marginTop);
     const totalHeight = rect.height + marginTop;
 
     const multiplier = Math.floor(offsetVal / 3); //as each of my row contains fixed 3 items
@@ -269,7 +268,7 @@ setTimeout(() => {
     const currentHeight = iframeDocument.documentElement.scrollTop;
     const element = iframeDocument.querySelector(".post-container");
     const rect = element.getBoundingClientRect();
-    const marginTop = parseInt(window.getComputedStyle(element).marginTop);
+    const marginTop = 0;//parseInt(window.getComputedStyle(element).marginTop);
     const totalHeight = rect.height + marginTop;
 
     let pageNum = Math.ceil(currentHeight / (3 * totalHeight));

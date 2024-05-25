@@ -141,7 +141,9 @@ iframeDocument.addEventListener("scroll", () => {
     
     setTimeout(() => {
       let len = storedPost.length;
-      productApi.getAllPosts(10, storedPost.length);
+      if(len<150){
+        productApi.getAllPosts(10, storedPost.length);
+      }   
       setTimeout(() => {
         if (storedPost.length <= 150 && len != storedPost.length) {
           display.appendPosts(cont, storedPost, len);

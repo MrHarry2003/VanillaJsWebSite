@@ -15,6 +15,7 @@ let iframeDocument = iframe.contentDocument;
 productApi.getAllPosts(10, 0);
 setTimeout(() => {
   document.body.style.zoom="90%";
+  document.body.style.zoom="90%";
   //console.log(storedPost.length);
   let iframe = document.getElementById("card-section");
   let iframeDocument = iframe.contentDocument;

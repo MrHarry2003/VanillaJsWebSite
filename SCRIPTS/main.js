@@ -218,9 +218,7 @@ function pageBtnEvent(offsetVal) {
           setTimeout(() => {
             const element = iframeDocument.querySelector(".post-container");
             const rect = element.getBoundingClientRect();
-            const marginTop = parseInt(
-              window.getComputedStyle(element).marginTop
-            );
+            const marginTop =0;// parseInt(window.getComputedStyle(element).marginTop);
             const totalHeight = rect.height + marginTop + 5;
 
             const multiplier = Math.floor(offsetVal / 3); //as each of my row contains fixed 3 items
@@ -248,7 +246,7 @@ setTimeout(() => {
     const currentHeight = iframeDocument.documentElement.scrollTop;
     const element = iframeDocument.querySelector(".post-container");
     const rect = element.getBoundingClientRect();
-    const marginTop = parseInt(window.getComputedStyle(element).marginTop);
+    const marginTop = 0;//parseInt(window.getComputedStyle(element).marginTop);
     const totalHeight = rect.height + marginTop;
 
     const multiplier = Math.floor(offsetVal / 3); //as each of my row contains fixed 3 items
@@ -269,7 +267,7 @@ setTimeout(() => {
     const currentHeight = iframeDocument.documentElement.scrollTop;
     const element = iframeDocument.querySelector(".post-container");
     const rect = element.getBoundingClientRect();
-    const marginTop = parseInt(window.getComputedStyle(element).marginTop);
+    const marginTop = 0;//parseInt(window.getComputedStyle(element).marginTop);
     const totalHeight = rect.height + marginTop;
 
     let pageNum = Math.ceil(currentHeight / (3 * totalHeight));
